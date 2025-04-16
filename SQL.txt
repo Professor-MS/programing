@@ -1,0 +1,97 @@
+__________________SQL_________________
+i. Also known as SEQUEL (Structured English QUEry Language)
+ii. Structured Query Language.
+iii. SQL can be written in both, capital and small letter SQL is not a case sensitive language.
+This language is used for database management system (DBMS)
+Creatin our first Database
+1. CREATE DATABASE dataBaseName; //this command will create a new database.
+2. DROP DATABASE dataBaseName; //this command will delete the database
+3. USE dataBaseName; // this command will work on those database on which we want some changes i.e Table creation, Changes in table data, also view data from table
+4. General Form of Table:
+ USE dataBaseName;
+	CREATE TABLE tableName(
+	colum1Name datatype constraints,
+	colum2ame datatype constraints,
+	colum3ame datatype constraints 
+);
+
+5. Table Creation of three column =|id|Name|Age|
+Code=>	USE dataBaseName;
+	CREATE TABLE Student(
+		id INT PRIMARY KEY,
+		name VARCHAR(50),
+		age INT NOT NULL
+);
+
+6.Insertion of data into table
+				(id, Name, Age)
+Code=>	INSERT INTO Student VALUES(1, "Salman", 20);
+	INSERT INTO Student VALUES(2,"Professor", 21);
+
+7. SELECT * FROM  Student; //To print table on screen
+
+8. SIGNED mean an integer with positive or negative value.
+
+9. Normally we can store -128 to 127 numbers in TINYINT but if write TINYINT UNSIGNED it will change the range from 0 to 255
+
+
+____Types of SQL commands___
+1. DDL (Data Definition Language): create, rename, drop, alter, truncate
+2. DQL (Data Query Language): select
+3. DML (Data Manipulation Language): insert, update & delete
+4. DCL (Data Control Language): grant & revoke permission to user
+5. TCL (Transaction Control Language): start transaction, commit, rollback
+
+
+_____Database related Queries_______
+1. CREATE DATABASE IF NOT EXISTS dataBaseName; //This command will give us a warning if there is another Database exists on the same name. if not exists then simple it will create a new database on the given name.
+
+2. DROP DATABASE IF EXISTS dataBaseName; //this command will first check the database if exists then it will be deleted and if not exists then it will show us a warning.
+
+3. SHOW DATABASES; // To view a list of all Databases that created.
+
+4. SHOW TABLES; //To view all the table that created.
+
+
+__________Table related Queries________
+1. Table Creation of three column =|rollno|Name|Age|
+Code=>	USE dataBaseName;
+	CREATE TABLE Student(
+		rollno INT PRIMARY KEY,
+		name VARCHAR(50),
+		age INT NOT NULL
+);
+ 
+2. SELECT * FROM  Student; //To print table on screen. * it mean all
+
+3. Insertion of data into table:
+	INSERT INTO Student VALUES(rollno, Name, Age); //this command will insert first three columns of rollno, name & age.
+Code=>	INSERT INTO Student VALUES(1, "Salman", 20); //This will insert data of first student in a row. for insertion of data the order is must to follow
+	INSERT INTO Student VALUES(2,"Professor", 21);
+
+
+__________KEYS_____________
+1. Primary Key
+2. Foreign Key
+
+1. Primary Key:(main key) it should be unique,
+	it is a column or set of column in a table that uniquely identifies each row (a unique id)
+there is only 1 Primary Key & it should be NOT null.
+
+2. Foreign Key:
+	A foreign key is a column or set of columns in a table that refer to the primary key in other table. 
+there can be multiples Foreign Keys.
+Foreign Keys can have duplicate & null values.
+
+____________Constraints__________
+	SQL Constraints are used to specify rules for data in a table.
+1. NOT NULL	//columns cannot have a null value 
+	colum1 int NOT NULL
+
+2. UNIQUE //all values in column are different
+	colum2 int UNIQUE
+	cnic INT UNIQUE,
+
+3. PIMARY KEY //makes a column unique & not null but used only for one
+	id int PRIMARY KEY
+

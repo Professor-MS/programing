@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Q&A</title>
+    <!-- Include the OpenAI GPT-3 script here -->
+    <script src="https://cdn.openai.com/gpt-3.5-turbo/davinci.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #666;
+            padding: 10px;
+            color: #fff;
+            text-align: center;
+        }
+
+        section {
+            margin: 20px 0;
+            background-color: #ddd;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        textarea {
+            width: 80%;
+            height: 100px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        p.response {
+            padding: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Programming Q&A</h1>
+    </header>
+
+    <!-- <nav>
+        <a href="#">Home</a> |
+        <a href="#">Courses</a> |
+        <a href="#">About Us</a> |
+        <a href="#">Contact</a>
+        Add more navigation links as needed -->
+    <!-- </nav> -->
+    
+
+    <section>
+        <textarea id="userInput" placeholder="Ask a programming question..."></textarea>
+        <button onclick="getAIResponse()">Get Response</button>
+        <p class="response" id="aiResponse"></p>
+    </section>
+
+    <footer>
+        &copy; 2024 Your Website. All rights reserved.
+    </footer>
+
+    <script>
+        function getAIResponse() {
+            const userInput = document.getElementById('userInput').value;
+
+            // Call the OpenAI GPT-3 API to get a response
+            gpt3.complete({
+                engine: 'davinci-codex',
+                prompt: `Code a response to the following question: ${userInput}`,
+                max_tokens: 150
+            }).then(response => {
+                document.getElementById('aiResponse').innerText = response.data.choices[0].text;
+            }).catch(error => console.error(error));
+        }
+    </script>
+</body>
+</html>

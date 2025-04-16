@@ -1,0 +1,252 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+	
+	<meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Graphic Design AI Responder</title>
+	<!--Code for Programming AI Start-->
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Q&A</title>
+    <!-- Include the OpenAI GPT-3 script here -->
+    <script src="https://cdn.openai.com/gpt-3.5-turbo/davinci.min.js"></script>
+	<!--Code for Programming AI End-->
+	<style>
+	 body { font-family: 'Arial', sans-serif;}
+	 footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        } 
+	
+	</style>
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	
+	   
+       <style>
+	    /* body { 
+			font-family: 'Arial', sans-serif;
+		 	margin: auto; 
+			padding: 30px;
+			background-color: #f4f4f4;
+			
+		} */
+		body {
+            
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            text-align: center;
+            padding: 20;
+            background-color: #f2f2f2;
+            color: #fff;
+        }
+
+		#chat-container {
+			max-width: 98%;
+			margin: auto;
+			background-color: #fff;
+			border: 1px solid #ccc;
+			border-radius: 5px; 
+			overflow: hidden; 
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			
+	}
+		#chat-header {
+		 	background-color: #1b5d89; 
+			color: #fff; 
+		 	padding: 20px; 
+		 	text-align: center; 
+			font-size: 40px;
+			font-family: 'Arial', sans-serif;
+	}
+		#chat-body { 
+		padding: 1px; 
+		max-height: 300px; 
+		overflow-y: auto;
+	}
+		#user-input {
+		 width: 100%; 
+		 padding: 12px; 
+		 box-sizing: border-box; 
+		 border: none; 
+		 border-top: 1px solid #ccc; 
+		 outline: none;
+	}
+		#send-button {
+		 width: 100%; 
+		 padding: 10px; 
+		 box-sizing: border-box; 
+		 background-color: #3498db; 
+		 color: #fff; border: none; 
+		 cursor: pointer;
+		 
+	} 
+	</style>
+															<!--Code for Programming AI Start-->
+	 <style>
+        /* body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+            color: #333;
+        }*/
+
+        header {
+            /* background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center; */
+			padding-top: 20px;
+			margin-top: 20px;
+			background-color: #0f4365; 
+			color: #fff; 
+		 	padding: 20px; 
+		 	text-align: center; 
+			font-size: 15px;
+			font-family: 'Arial', sans-serif;
+			box-sizing: border-box;
+			border: 1px solid #ccc;
+			margin: 10px;
+			border-radius: 5px;
+        }
+
+        /*nav {
+            background-color: #666;
+            padding: 10px;
+            color: #fff;
+            text-align: center;
+        } */
+
+        section {
+            
+            background-color: #ddd;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: center;
+			box-sizing: border-box;
+			border: 1px solid #ccc;
+			margin: 10px;
+			
+						
+        }
+
+        textarea {
+            width: 80%;
+            height: 100px;
+            margin: 10px;
+			box-sizing: border-box;
+			border: 1px solid #ccc;
+			
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        p.response {
+            padding: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>								<!--Code for Programming AI End-->
+	 </head> 
+	 <body> 
+		<div class="logo">
+			<img width="120px" src="images/logo.png">
+		</div>
+		
+		<nav>
+			<div class="nav-links" id="navLinks">
+			<i class="fas fa-times" onclick="hideMenu()"></i>
+			
+		
+				<ul>
+					<li><a href="index.html">Home</a></li>
+			<li><a href="Course.html">Courses</a></li>
+			<li><a href="blog.html">Blog</a></li>
+			<li><a href="ChatBot.html">ChatBot</a></li>
+			<li><a href="about.html">About us</a></li>
+			<li><a href="contact.html">Contact Us</a></li>
+				</ul>
+			</div>
+			<i class="fas fa-bars" onclick="showMenu()"></i>
+		
+		</nav>
+		 <div id="chat-container">
+			  <div id="chat-header">Graphic Design AI</div> 
+			  <div id="chat-body"></div>
+			  <input type="text" id="user-input" placeholder="Ask me about graphic design...">
+			  <button id="send-button" onclick="sendMessage()">Send</button> 
+		</div>
+	<script>
+	 const API_KEY = 'YOUR_API_KEY'; // Replace with your OpenAI API key
+	function sendMessage() 
+	{ const userInput = document.getElementById('user-input'); const message = userInput.value;
+	if (message.trim() === '') { return; }
+	const chatBody = document.getElementById('chat-body'); const userMessage = document.createElement('div'); userMessage.className = 'message user-message'; userMessage.textContent = message; chatBody.appendChild(userMessage);
+
+	// Call OpenAI API for AI response 
+	fetch('https://api.openai.com/v1/engines/davinci-codex/completions', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${API_KEY}` }, body: JSON.stringify({ prompt: message, max_tokens: 50 }) }) .then(response => response.json()) .then(data => {
+	const aiMessage = document.createElement('div'); aiMessage.className = 'message ai-message'; aiMessage.textContent = data.choices[0].text; chatBody.appendChild(aiMessage);
+
+	// Scroll to the bottom of the chat 
+	chatBody.scrollTop = chatBody.scrollHeight;
+	}) .catch(error => console.error('Error:', error))
+
+	// Clear the user input 
+	userInput.value = '';
+	} 
+
+	</script>
+												<!--Code for Programming AI Start-->
+	<header>
+        <h1>Programming Q&A</h1>
+    </header>
+	<section>
+        <textarea id="userInput" placeholder="Ask a programming question..."></textarea>
+        <button onclick="getAIResponse()">Get Response</button>
+        <p class="response" id="aiResponse"></p>
+    </section>
+
+	<script>
+		
+        function getAIResponse() {
+            const userInput = document.getElementById('userInput').value;
+
+            // Call the OpenAI GPT-3 API to get a response
+            gpt3.complete({
+                engine: 'davinci-codex',
+                prompt: `Code a response to the following question: ${userInput}`,
+                max_tokens: 150
+            }).then(response => {
+                document.getElementById('aiResponse').innerText = response.data.choices[0].text;
+            }).catch(error => console.error(error));
+        }
+    </script>
+																<!--Code for Programming AI End-->
+	 </body> 
+	 <footer>
+        &copy; 2024 Ms Professor. All rights reserved.
+    </footer>
+	 </html>

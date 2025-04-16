@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!-- HTML Coding start Date: Sunday, November 12, 2023, time:10:59:00 AM -->
+<html>
+<head>
+	<title>MS-Tech.pk Courses</title>
+	<style> 
+	 body {
+            
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+	 }
+
+
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #f2f2f2;
+            color: #fff;
+        }
+		/* body { font-family: 'Arial', sans-serif;}  */
+	 	footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+		</style>
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<!------------------------header-------------------->
+<div class="logo">
+	<img width="120px" src="images/logo.png">
+</div>
+
+<nav>
+	<div class="nav-links" id="navLinks">
+	<i class="fas fa-times" onclick="hideMenu()"></i>
+	
+
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="Course.html">Courses</a></li>
+			<li><a href="blog.html">Blog</a></li>
+			<li><a href="Chatbot.html">ChatBot</a></li>
+			<li><a href="about.html">About us</a></li>
+			<li><a href="contact.html">Contact Us</a></li>			
+			
+		</ul>
+	</div>
+	<i class="fas fa-bars" onclick="showMenu()"></i>
+
+</nav>
+
+<!--------------------- End header------------------->
+
+<!----------------------Homepage-------------------->
+<div class="banner">
+
+		<div class="Text-block"> 
+			<h1>Free Courses Available</h1>
+			<p>Learn the Basics of Programming, Graphic Design & Video-editing to Advance Level<br>Even if you don't have any background</p>
+			<a href="Course.html" class="btn">Learn Now</a>
+		</div>
+</div>
+<!--------------------- End Homepage------------------->
+
+<script>
+var navLinks = document.getElementById("navLinks"); 
+function showMenu() {
+	navLinks.style.left = "0";
+}
+function hideMenu() {
+	navLinks.style.left = "-200px";
+}
+</script>
+</body>
+<footer>
+	&copy; 2024 Ms Professor. All rights reserved.
+
+</footer>
+
+</html>

@@ -1,0 +1,21 @@
+# Ignore all .exe files
+*.exe
+
+# Object files
+*.o
+*.obj
+
+# Build directories
+/build/
+/bin/
+/Debug/
+/Release/
+
+# Visual Studio files (if applicable)
+*.sln
+*.vcxproj
+*.vcxproj.user
+*.pdb
+
+# Mac/Linux generated files
+*.out

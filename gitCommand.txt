@@ -1,0 +1,23 @@
+git
+git --version
+git config --global user.name "<YOUR_NAME>"
+git config --global user.email "<YOUR_EMAIL>"
+cd DIRECTORY
+mkdir <FOLDER_NAME>
+code .
+git init 
+Also Install Git Graph extension for better work with git
+ls -la
+git add <FILE_NAME>
+git add .
+git diff
+git rm <FILE_NAME>
+git commit -m "<YOUR_MESSAGE>" 
+git log
+git log --online
+git show <COMMIT_ID>
+git blame <FILE_NAME>
+git status
+git reset --hard <COMMIT_ID>
+git revert <COMMIT_ID>
+//VIDEO REACHED TO 47:40

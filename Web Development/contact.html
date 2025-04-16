@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+        <title>MS-Tech.pk Conatct</title>
+        <style> body { font-family: 'Arial', sans-serif;} </style>
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* header {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            color: #fff;
+        } */
+
+        section {
+            max-width: 1000px;
+            margin: 10;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+      
+    </nav>
+    <div class="logo">
+        <img width="120px" src="images/logo.png">
+    </div>
+    
+    <nav>
+        <div class="nav-links" id="navLinks">
+        <i class="fas fa-times" onclick="hideMenu()"></i>
+        
+    
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Course.html">Courses</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="ChatBot.html">ChatBot</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>			
+                
+            </ul>
+        </div>
+        <i class="fas fa-bars" onclick="showMenu()"></i>
+    
+    </nav>
+
+    <header>
+        <h1>Contact Us</h1>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0px;
+            }
+    
+            header {
+                text-align: center;
+                padding: 20px;
+                background-color: #f2f2f2;
+            }
+    
+            section {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+    
+            h2 {
+                color: #333;
+            }
+    
+            p {
+                line-height: 1.6;
+                color: #666;
+            }
+        </style>
+    </header>
+    
+
+    <section>
+        <h2>Get in Touch</h2>
+        <p>Have questions or want to reach out? Fill out the form below:</p>
+
+        <form action="submit_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+</body>
+<footer>
+    &copy; 2024 Ms Professor. All rights reserved.
+</footer>
+</html>
